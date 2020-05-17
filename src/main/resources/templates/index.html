@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+     xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="layout">
+    <head>
+        <title>Lab 10</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        
+        <section th:object="${carmanufacturer}">
+            <h3>Producent: </h3>
+            <p th:text="${carmanufacturer.id}"></p>
+            <p th:text="${carmanufacturer.name}"></p>
+        </section>
+        <section th:object="${carmodel}">
+            <h3>Model: </h3>
+            <p th:text="${carmodel.id}"></p>
+            <p th:text="${carmodel.name}"></p>
+            <p th:text="${carmodel.manufacturer.id}"></p>
+            <p th:text="${carmodel.manufacturer.name}"></p>
+        </section>
+    </body>
+</html>
